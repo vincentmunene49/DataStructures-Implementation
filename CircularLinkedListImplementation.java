@@ -17,6 +17,7 @@ class CircularLinkedList {
 class Node {
     int data;
     Node next;
+    Node previous;//this will be used in our Doubly linked list ignore for now
 }
 
 class CircularList {

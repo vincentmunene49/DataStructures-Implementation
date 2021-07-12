@@ -19,8 +19,8 @@ class SinglyLinkedList {
 class Node {
     int data;
     Node next;
+    Node previous;//ignore for now to be used in our doubly linked list
 }
-
 class SinglyList {
     private Node first;
 

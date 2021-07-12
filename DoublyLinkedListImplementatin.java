@@ -21,15 +21,15 @@ class DoublyLinkedListImplementation {
     }
 }
 
-class ANode {
+class Node {
     int data;
-    ANode next;
-    ANode previous;
+    Node next;
+    Node previous;
 }
 
 class DoubleImplementation {
-    private ANode first;
-    private ANode last;
+    private Node first;
+    private Node last;
 
     DoubleImplementation() {
         first = null;
@@ -37,7 +37,7 @@ class DoubleImplementation {
     }
 
     public void addFirst(int data) {
-        ANode newNode = new ANode();
+        Node newNode = new Node();
         newNode.data = data;
         if (isEmpty()) {
             last = newNode;
@@ -51,7 +51,7 @@ class DoubleImplementation {
     }
 
     public void addLast(int data) {
-        ANode newNode = new ANode();
+        Node newNode = new Node();
         newNode.data = data;
         if (isEmpty()) {
             first = newNode;
@@ -63,8 +63,8 @@ class DoubleImplementation {
         last = newNode;
     }
 
-    public ANode deleteFirst() {
-        ANode current = first;
+    public Node deleteFirst() {
+        Node current = first;
         if (first.next == null) {
             last = null;
         } else {
@@ -75,8 +75,8 @@ class DoubleImplementation {
 
     }
 
-    public ANode deleteLast() {
-        ANode currentLast = last;
+    public Node deleteLast() {
+        Node currentLast = last;
         if (last == null) {
             first = null;
         } else {
@@ -88,7 +88,7 @@ class DoubleImplementation {
     }
 
     public boolean insertAfter(int value, int data) {
-        ANode current = first;
+        Node current = first;
 
         while (current.data != value) {
             current = current.next;
@@ -97,7 +97,7 @@ class DoubleImplementation {
                 return false;
             }
         }
-        ANode newNode = new ANode();
+        Node newNode = new Node();
         newNode.data = data;
 
         if (current == last) {
@@ -114,8 +114,8 @@ class DoubleImplementation {
 
     }
 
-    public ANode deleteKey(int key) {
-        ANode current = first;
+    public Node deleteKey(int key) {
+        Node current = first;
 
         while (current.data != key) {
             current = current.next;
@@ -144,7 +144,7 @@ class DoubleImplementation {
     }
 
     public void display() {
-        ANode current = first;
+        Node current = first;
         while (current != null) {
             System.out.println(current.data);
             current = current.next;
